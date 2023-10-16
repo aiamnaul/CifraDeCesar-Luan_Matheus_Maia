@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cifra de César</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main>
+    <div>
+      <h1>Cifra de César</h1>
+        <textarea id="inputText" placeholder="Insira o texto aqui"></textarea>
+        <br>
+        <label for="encrypt">Cifrar</label>
+        <input type="radio" name="mode" id="encrypt" value="encrypt" checked>
+        <label for="decrypt">Decifrar</label>
+        <input type="radio" name="mode" id="decrypt" value="decrypt">
+        <br>
+        <label for="shift">Cifra (número ou letra):</label>
+        <input type="text" id="shift" placeholder="Cifra">
+        <br>
+        <button id="processButton">Processar</button>
+        <br>
+        <p id="outputText"></p>
+    </div>
+  </main>
+  
+  <script src="main.js"></script>
+</body>
+</html>
