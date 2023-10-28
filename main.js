@@ -25,9 +25,8 @@ function encryptText(text, shift) {
       if (char.match(/[a-zA-Z]/)) {
         const isUpperCase = char === char.toUpperCase();
         const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
-        const position =
-          alphabet.indexOf(isUpperCase ? char : char.toUpperCase()) + 1;
-        const shiftedPosition = (position + parseInt(shift) - 1) % 26;
+        const position = alphabet.indexOf(isUpperCase ? char : char.toUpperCase()) ;
+        const shiftedPosition = (position + parseInt(shift) ) % 26;
         const shiftedChar = isUpperCase
           ? alphabet[shiftedPosition]
           : alphabet[shiftedPosition].toLowerCase();
@@ -38,6 +37,7 @@ function encryptText(text, shift) {
     .join("");
 }
 
+
 function decryptText(text, shift) {
-  return encryptText(text, 26 - parseInt(shift));
+  return encryptText(text, (26 + parseInt(shift)) - parseInt(shift));
 }
